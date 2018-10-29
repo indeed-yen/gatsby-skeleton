@@ -1,0 +1,5 @@
+gunicorn==19.9.0
+
+falcon==1.4.1
+
+mongoengine==0.15.3
