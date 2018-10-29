@@ -11,6 +11,17 @@ services:
     - "9000:9000"
     command: /start.sh
 
+  webpack:
+    build:
+      context: .
+      dockerfile: ./compose/local/webpack/Dockerfile
+    depends_on:
+    - mongo
+    - redis
+    volumes:
+    - .:/app
+    command: yarn watch
+
   mongo:
     image: mongo
     restart: always
