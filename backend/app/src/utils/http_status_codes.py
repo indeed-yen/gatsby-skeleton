@@ -1,0 +1,8 @@
+import falcon
+
+
+class HTTPStatus:
+    OK = falcon.HTTP_OK
+    BAD_REQUEST = falcon.HTTP_BAD_REQUEST
+    INTERNAL_SERVER_ERROR = falcon.HTTP_INTERNAL_SERVER_ERROR
+    UNAUTHORIZED = falcon.HTTP_UNAUTHORIZED

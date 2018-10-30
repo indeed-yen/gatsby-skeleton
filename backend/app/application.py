@@ -1,8 +1,10 @@
 import os
 import falcon
 from pymongo import MongoClient
-from dao import HowtoHireDAO
-from resources import HowtoHireResource
+from src.dao import HowtoHireDAO
+from src.resources import HowtoHireResource
+from src.handlers.exception_handler import unexpected_error_handler
+
 
 mongo_client = MongoClient(host=os.environ['MONGO_HOST'],
                            port=int(os.environ['MONGO_PORT']),
@@ -18,6 +20,7 @@ howtohire_dao = HowtoHireDAO(db_connect)
 def build_app():
     api = falcon.API()
     api.add_route('/how_to_hire/{id}', HowtoHireResource(howtohire_dao))
+    api.add_error_handler(Exception, unexpected_error_handler)
     return api
 
 
