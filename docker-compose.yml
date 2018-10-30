@@ -17,10 +17,11 @@ services:
       dockerfile: ./compose/local/webpack/Dockerfile
     depends_on:
     - mongo
-    - redis
     volumes:
     - .:/app
     command: yarn watch
+    ports:
+      - "8080:8080"
 
   mongo:
     image: mongo
