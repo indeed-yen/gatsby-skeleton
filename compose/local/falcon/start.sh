@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 cd backend/app
-gunicorn -b :9000 app:app
+gunicorn --bind :9000 --reload app:app
