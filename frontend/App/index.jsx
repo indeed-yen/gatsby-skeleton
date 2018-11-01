@@ -1,5 +1,11 @@
 import React, { Component } from 'react'
 
-export const App = () => (
-    console.log("Hello World!")
-    );
+export default class App extends Component {
+  render(){
+    return (
+      <div>
+        <p>Webpack Bundle is loaded!</p>
+      </div>
+    )
+  }
+}
