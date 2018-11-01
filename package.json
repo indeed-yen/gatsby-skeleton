@@ -4,8 +4,7 @@
   "description": "Content Pages",
   "main": "webpack.config.js",
   "scripts": {
-    "watch": "yarn install --ignore-engines; webpack-dev-server --config ./config/webpack.dev.js --content-base ./frontend  --colors --host 0.0.0.0 --port 3000; ",
-    "start": "webpack-dev-server --config ./config/webpack.dev.js --content-base ./frontend"
+    "start": "yarn install --ignore-engines; webpack-dev-server --config ./config/webpack.dev.js --content-base ./frontend  --colors --host 0.0.0.0 --port 3000; ",
   },
   "dependencies": {
     "axios": "^0.18.0",

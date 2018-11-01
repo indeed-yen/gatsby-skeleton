@@ -28,7 +28,7 @@ services:
     - falcon
     volumes:
     - .:/app
-    command: yarn watch
+    command: yarn start
     ports:
       - "3000:3000"
 
