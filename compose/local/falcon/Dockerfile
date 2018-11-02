@@ -10,5 +10,5 @@ RUN sed -i 's/\r//' /start.sh
 RUN chmod +x /start.sh
 
 # add demo app
-COPY ./backend/app /app
+COPY ./api/app /app
 WORKDIR /app
