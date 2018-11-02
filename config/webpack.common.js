@@ -10,18 +10,19 @@ module.exports = {
         path: path.resolve(__dirname, '../dist'),
         publicPath: "/"
     },
-    devServer: {
-        port: 3042,
-        historyApiFallback: true,
-        overlay: true,
-        open: true,
-    },
     module: {
         rules: [
             {
                 test: /\.(js|jsx)$/,
                 exclude: [/node_modules/],
-                use: [{ loader: "babel-loader" }]
+                use: [{
+                  loader: "babel-loader",
+                  options: {
+                    presets: ['react']
+                  }
+                }
+                ],
+
             },
             {
                 test: /.*\.(gif|png|jpe?g|svg)$/i,
