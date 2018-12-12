@@ -1,1 +1,1 @@
-# content_pages
+# GatsbyJS skeleton
