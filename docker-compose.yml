@@ -19,18 +19,6 @@ services:
     ports:
     - "9000:9000"
     command: /start.sh
-
-  webpack:
-    build:
-      context: .
-      dockerfile: ./compose/local/webpack/Dockerfile
-    depends_on:
-    - falcon
-    volumes:
-    - .:/app
-    command: yarn start
-    ports:
-      - "3042:3042"
 #
 #  mongo:
 #    image: mongo
