@@ -97,13 +97,13 @@ venv.bak/
 # Rope project settings
 .ropeproject
 
-# mkdocs documentation
-/site
-
 # mypy
 .mypy_cache/
 
 static/
-node_modules/
+site/node_modules/
+site/.cache/
+site/public/
+site/.prettierrc
 webpack-stats.json
 yarn.lock

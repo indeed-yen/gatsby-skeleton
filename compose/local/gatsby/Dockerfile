@@ -9,6 +9,6 @@ COPY ./site /site
 WORKDIR /site
 VOLUME /site
 
-COPY ./compose/local/gatsby/start.sh /start.sh
-RUN sed -i 's/\r//' /start.sh
-RUN chmod +x /start.sh
+COPY ./compose/local/gatsby/start.sh /site/start.sh
+RUN sed -i 's/\r//' /site/start.sh
+RUN chmod +x /site/start.sh
