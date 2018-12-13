@@ -18,19 +18,19 @@ services:
 #    - mongo
     ports:
     - "9000:9000"
-    command: /start.sh
+    command: gunicorn --bind :9000 --reload application:app
 
   gatsby:
     build:
       context: .
-      dockerfile: compose/local/gatsby/Dockerfile
+      dockerfile: ./compose/local/gatsby/Dockerfile
     depends_on:
     - falcon
     volumes:
     - .:/site
     ports:
     - "8000:8000"
-    command: /start.sh
+    command: yarn watch
 #
 #  mongo:
 #    image: mongo
